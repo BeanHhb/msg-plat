@@ -2,6 +2,7 @@ package com.beanh.msg.plat.web.controller;
 
 import com.beanh.msg.plat.common.pojo.SmsParam;
 import com.beanh.msg.plat.common.pojo.TaskInfo;
+import com.beanh.msg.plat.common.pojo.vo.BasicResultVO;
 import com.beanh.msg.plat.handler.handler.SmsHandler;
 import com.beanh.msg.plat.web.WebApplication;
 import org.slf4j.Logger;
@@ -38,12 +39,15 @@ public class SendController {
 	 * @return
 	 */
 	@GetMapping("/sendSms")
-	public boolean sendSms(@RequestParam String phone, @RequestParam String content, @RequestParam Long messageTemplateId) {
+	public BasicResultVO<Void> sendSms(@RequestParam String phone, @RequestParam String content, @RequestParam Long messageTemplateId) {
 		TaskInfo taskInfo = TaskInfo.builder()
 				.receiver(new HashSet<>(Collections.singletonList(phone)))
 				.content(content)
 				.messageTemplateId(messageTemplateId)
 				.build();
-		return smsHandler.doHandler(taskInfo);
+		if (smsHandler.doHandler(taskInfo)) {
+			return BasicResultVO.success("发送信息成功");
+		}
+		return BasicResultVO.fail();
 	}
 }
