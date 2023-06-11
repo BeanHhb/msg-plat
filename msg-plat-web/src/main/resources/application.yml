@@ -1,0 +1,26 @@
+# ok http
+ok:
+  http:
+    connect-timeout: 30
+    read-timeout: 30
+    write-timeout: 30
+    max-idle-connections: 200
+    keep-alive-duration: 300
+
+# 腾讯云 短信配置
+tencent:
+  sms:
+    account:
+      secret-id: AKIDbQ4Tjpx6CC7vXv8GH4dzKf1ENNHAush4
+      secret-key: HQQDoDOL3aCmCRVccT8dv37DJPRVbkwD
+      sms-sdk-app-id: 1400412108
+      template-id: 1770205
+      sign-name: Bean的胡思乱想公众号
+
+# 数据库 配置
+spring:
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/beanh?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: HUANG_23
+    driver-class-name: com.mysql.cj.jdbc.Driver
