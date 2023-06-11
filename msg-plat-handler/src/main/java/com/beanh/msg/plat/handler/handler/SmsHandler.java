@@ -18,8 +18,8 @@ import java.util.List;
 @Component
 public class SmsHandler implements Handler {
 
-//	@Autowired
-//	private SmsRecordDao smsRecordDao;
+	@Autowired
+	private SmsRecordDao smsRecordDao;
 
 	@Autowired
 	private SmsScript smsScript;
@@ -36,7 +36,7 @@ public class SmsHandler implements Handler {
 		List<SmsRecord> recordList = smsScript.send(smsParam);
 
 		if (CollUtil.isNotEmpty(recordList)) {
-//			smsRecordDao.saveAll(recordList);
+			smsRecordDao.saveAll(recordList);
 			return true;
 		}
 
