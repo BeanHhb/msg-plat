@@ -3,7 +3,7 @@ package com.beanh.msg.plat.support.pipeline;
 import cn.hutool.core.collection.CollUtil;
 import cn.hutool.core.util.StrUtil;
 import com.beanh.msg.plat.common.enums.RespStatusEnum;
-import com.beanh.msg.plat.common.pojo.vo.BasicResultVO;
+import com.beanh.msg.plat.common.vo.BasicResultVO;
 import lombok.Data;
 
 import java.util.List;

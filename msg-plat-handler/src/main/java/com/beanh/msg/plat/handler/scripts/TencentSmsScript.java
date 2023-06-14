@@ -5,7 +5,7 @@ import cn.hutool.core.util.ArrayUtil;
 import cn.hutool.core.util.IdUtil;
 import com.alibaba.fastjson.JSON;
 import com.beanh.msg.plat.common.enums.SmsStatus;
-import com.beanh.msg.plat.common.pojo.SmsParam;
+import com.beanh.msg.plat.common.domain.SmsParam;
 import com.beanh.msg.plat.support.domain.SmsRecord;
 import com.google.common.base.Throwables;
 import com.tencentcloudapi.common.Credential;

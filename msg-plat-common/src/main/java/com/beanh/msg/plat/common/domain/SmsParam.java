@@ -1,4 +1,4 @@
-package com.beanh.msg.plat.common.pojo;
+package com.beanh.msg.plat.common.domain;
 
 import lombok.Builder;
 import lombok.Data;

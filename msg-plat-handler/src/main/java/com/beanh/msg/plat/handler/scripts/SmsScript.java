@@ -1,6 +1,6 @@
 package com.beanh.msg.plat.handler.scripts;
 
-import com.beanh.msg.plat.common.pojo.SmsParam;
+import com.beanh.msg.plat.common.domain.SmsParam;
 import com.beanh.msg.plat.support.domain.SmsRecord;
 
 import java.util.List;

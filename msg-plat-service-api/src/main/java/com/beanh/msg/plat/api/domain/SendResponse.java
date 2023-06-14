@@ -1,6 +1,8 @@
 package com.beanh.msg.plat.api.domain;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * 发送接口 返回值
@@ -9,6 +11,8 @@ import lombok.Data;
  * @date 2023/6/13 13:52
  */
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class SendResponse {
 
 	/**

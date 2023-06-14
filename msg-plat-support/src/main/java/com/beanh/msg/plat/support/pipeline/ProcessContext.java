@@ -1,6 +1,6 @@
 package com.beanh.msg.plat.support.pipeline;
 
-import com.beanh.msg.plat.common.pojo.vo.BasicResultVO;
+import com.beanh.msg.plat.common.vo.BasicResultVO;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

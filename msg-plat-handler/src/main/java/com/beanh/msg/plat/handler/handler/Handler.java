@@ -1,6 +1,6 @@
 package com.beanh.msg.plat.handler.handler;
 
-import com.beanh.msg.plat.common.pojo.TaskInfo;
+import com.beanh.msg.plat.common.domain.TaskInfo;
 
 /**
  * @author Bean

@@ -4,7 +4,7 @@ import cn.hutool.core.collection.CollUtil;
 import com.beanh.msg.plat.api.domain.MessageParam;
 import com.beanh.msg.plat.api.impl.domain.SendTaskModel;
 import com.beanh.msg.plat.common.enums.RespStatusEnum;
-import com.beanh.msg.plat.common.pojo.vo.BasicResultVO;
+import com.beanh.msg.plat.common.vo.BasicResultVO;
 import com.beanh.msg.plat.support.pipeline.BusinessProcess;
 import com.beanh.msg.plat.support.pipeline.ProcessContext;
 

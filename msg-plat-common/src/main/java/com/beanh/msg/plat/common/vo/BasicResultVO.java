@@ -1,4 +1,4 @@
-package com.beanh.msg.plat.common.pojo.vo;
+package com.beanh.msg.plat.common.vo;
 
 import com.beanh.msg.plat.common.enums.RespStatusEnum;
 import lombok.AllArgsConstructor;

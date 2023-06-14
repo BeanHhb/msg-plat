@@ -1,8 +1,10 @@
 package com.beanh.msg.plat.handler.handler;
 
 import cn.hutool.core.collection.CollUtil;
-import com.beanh.msg.plat.common.pojo.SmsParam;
-import com.beanh.msg.plat.common.pojo.TaskInfo;
+import cn.hutool.core.util.StrUtil;
+import com.beanh.msg.plat.common.domain.SmsParam;
+import com.beanh.msg.plat.common.domain.TaskInfo;
+import com.beanh.msg.plat.common.dto.SmsContentModel;
 import com.beanh.msg.plat.handler.scripts.SmsScript;
 import com.beanh.msg.plat.support.dao.SmsRecordDao;
 import com.beanh.msg.plat.support.domain.SmsRecord;
@@ -27,9 +29,18 @@ public class SmsHandler implements Handler {
 	@Override
 	public boolean doHandler(TaskInfo taskInfo) {
 
+		SmsContentModel smsContentModel = (SmsContentModel) taskInfo.getContentModel();
+
+		String resultContent;
+		if (StrUtil.isNotBlank(smsContentModel.getUrl())) {
+			resultContent = smsContentModel.getContent() + " " + smsContentModel.getUrl();
+		} else {
+			resultContent = smsContentModel.getContent();
+		}
+
 		SmsParam smsParam = SmsParam.builder()
 				.phones(taskInfo.getReceiver())
-				.content(taskInfo.getContent())
+				.content(resultContent)
 				.messageTemplateId(taskInfo.getMessageTemplateId())
 				.supplierId(10)
 				.supplierName("腾讯云通知类消息渠道").build();
